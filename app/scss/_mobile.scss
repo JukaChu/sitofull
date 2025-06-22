@@ -1,0 +1,489 @@
+@function vw($px-vw, $base-vw: 393px) {
+    @return ($px-vw * 100vw) / $base-vw
+}
+
+@media screen and (max-width: 767px) {
+    body, html {
+        font-size: vw(20px);
+    }
+    .container {
+        padding: 0 1rem;
+        max-width: 100% !important;
+    }
+    .header {
+        .scs {
+            display: flex;
+        }
+        .logo {
+            height: 3.9rem;
+        }
+
+        &-cont {
+            padding: 1.6rem 0;
+            align-items: center;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &-menu {
+            display: flex;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - var(--headerheight));
+            background: $main-color;
+            padding: 1.5rem 1rem 3rem;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            transform: translate(105%, 0);
+            transition: all 0.4s ease-in-out;
+
+            .menu {
+                width: 100%;
+                padding-bottom: 1.5rem;
+                margin-bottom: 1.5rem;
+                position: relative;
+
+                &::after {
+                    width: 4.5rem;
+                    height: 0.1rem;
+                    background: #fff;
+                    opacity: 0.3;
+                    display: inline-block;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    top: auto;
+                    transform: none;
+                }
+
+                ul {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 1.5rem;
+
+                    li {
+                        width: 100%;
+
+                        a {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.header-fixed {
+            .header-cont {
+                padding: 1rem 0;
+            }
+
+            &.active {
+                .header-cont {
+                    padding: 1.6rem 0;
+                }
+
+                .logo {
+                    height: 3.9rem;
+                }
+            }
+        }
+
+        &.active {
+            .header-menu {
+                transform: translate(0, 0);
+            }
+        }
+    }
+    .burger {
+        display: flex;
+        position: relative;
+        width: 1.6rem;
+        height: 1.4rem;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+
+        span {
+            width: 100%;
+            height: 0.2rem;
+            border-radius: 0.2rem;
+            background: #fff;
+            transition: all 0.4s ease-in-out;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            &:nth-child(2) {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:nth-child(3) {
+                top: auto;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        &.active {
+            span {
+                &:nth-child(1) {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &:nth-child(3) {
+                    bottom: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+    .subttl {
+        font-size: 1.2rem;
+    }
+
+    .hero-home {
+        &__cont {
+            padding-top: 25.5rem;
+            padding-bottom: 0;
+        }
+
+        &__bg {
+            height: 100vh;
+        }
+
+        &__top {
+            width: 100%;
+            gap: 1.5rem;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        &__play {
+            width: 100%;
+            gap: 1rem;
+            margin: 0;
+
+            .ic {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+
+            p {
+                font-size: 0.65rem;
+            }
+        }
+
+        &__bot {
+            margin-top: 1.5rem;
+            gap: 0.5rem;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        &__info {
+            width: 100%;
+            border: 1px solid $cream;
+            padding: 0.75rem 0.2rem 0.65rem 0.75rem;
+            gap: 0.3rem;
+
+            .txt {
+                span {
+                    font-size: 1rem;
+                    padding-bottom: 0.25rem;
+                    margin-bottom: 0.25rem;
+                    border-bottom: 0.15rem solid $main-color;
+                }
+
+                p {
+                    font-size: 0.65rem;
+                }
+            }
+
+            .img {
+                width: 8.5rem;
+            }
+        }
+    }
+    .home-types {
+        padding: 3rem 0 0.75rem;
+
+        &__cont {
+            gap: 1.5rem;
+        }
+
+        &__top {
+            gap: 1.5rem;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .btns {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0.75rem;
+
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .home-types__item .txt {
+        padding: 1rem;
+        max-width: 7.5rem;
+        right: 3rem;
+        gap: 0.5rem;
+
+        span {
+            font-size: 1rem;
+        }
+
+        .arr {
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+    }
+    .home-types__item .img {
+        width: 79%;
+        padding-top: 103.12%;
+    }
+    .slider-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        &::after {
+            width: 0.85rem;
+            height: 0.8rem;
+        }
+    }
+    .about-us {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+
+        &__bg {
+            position: relative;
+            top: auto;
+            left: auto;
+            bottom: auto;
+            right: auto;
+            width: calc(100% + 2rem);
+            margin-left: -1rem;
+            padding-top: 88.6%;
+            height: 0;
+            padding-bottom: 0;
+            @include overFlow;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &__text {
+            padding: 1.5rem 0 0;
+
+            span {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.65rem;
+                margin-bottom: 0.75rem;
+            }
+        }
+    }
+    .about-us__cont {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    .logos-stripe {
+        overflow: hidden;
+        border: none;
+    }
+    .logos-stripe__cont {
+        padding: 0.75rem 0;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1.5rem;
+        justify-content: flex-start;
+
+        .img {
+            width: 6rem;
+            flex-shrink: 0;
+        }
+    }
+    .faq {
+        padding: 0.75rem 0;
+
+        &-cont {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 2rem;
+        }
+
+        &-left {
+            width: 100%;
+            gap: 0.75rem;
+        }
+
+        &-image {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        &-right {
+            width: 100%;
+        }
+
+        &-list {
+            width: 100%;
+        }
+    }
+    .single-faq {
+        &__head {
+            span {
+                font-size: 0.8rem;
+            }
+        }
+
+        &__cont {
+            .txt {
+                font-size: 0.65rem;
+                padding-right: 3.75rem;
+            }
+        }
+    }
+    .contact-us {
+        margin: 0.75rem 0 1.5rem;
+        padding: 0;
+        background: #EAEAEA;
+
+        &__cont {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        &__left {
+            width: 100%;
+            padding: 1.5rem 0;
+        }
+
+        &__right {
+            width: calc(100% + 2rem);
+            margin-left: -1rem;
+        }
+
+        &__form {
+            .subttl {
+                margin-bottom: 1.5rem;
+            }
+
+            > p {
+                font-size: 0.65rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+    .footer {
+        padding: 1.5rem 0;
+
+        &__cont {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 3rem;
+        }
+
+        &__logo {
+            width: 10.7rem;
+            height: 10.7rem;
+            margin-right: 0;
+        }
+
+        &__title {
+            width: 100%;
+            font-size: 1.2rem;
+            padding-top: 0.75rem;
+            margin-bottom: 0.75rem;
+
+            &::before {
+                width: 100%;
+                height: 0.15rem;
+            }
+        }
+
+        &__menu {
+            width: 100%;
+            margin: 0;
+
+            ul {
+                gap: 0.5rem;
+
+                li {
+                    a {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+        &__socs {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            .mail {
+                font-size: 0.8rem;
+            }
+        }
+
+        &__powered {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3rem;
+        }
+    }
+}
+

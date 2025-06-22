@@ -1,0 +1,153 @@
+@function vw($px-vw, $base-vw: 1400px) {
+  @return ($px-vw * 100vw) / $base-vw
+}
+
+$main-font: "Helvetica", sans-serif;
+$second-font: "Pobeda", sans-serif;
+
+
+$main-color: #000;
+$cream: #C18539;
+$green: #B7EF5A;
+$blue: rgba(25, 39, 91, 1);
+$light: #DEE9FF;
+$grey: #EAEAEA;
+$border: #EAEAEA;
+
+$pink: #DF1883;
+
+$second-color: #473B7F;
+$bg: rgba(14, 14, 14, 1);
+$orange: rgba(246, 120, 15, 1);
+$red: #E53935;
+$text: #6B6B66;
+$hero: #D6D0B3;
+$darkblue: #00468b;
+$blueop: rgba(175, 215, 255, 0.5);
+$lightgreen: #A9CF45;
+$white: #fff;
+$black: rgba(52, 52, 52, 1);
+$yellow: #FFDC0F;
+$bord: #F4EFE9;
+$size: 20px;
+
+@mixin overFlow {
+  overflow: hidden;
+  backface-visibility: hidden;
+  appearance: none;
+}
+
+@mixin flexStart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCenterH {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@mixin flexCenterV {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin rtl-margin($property, $ltrproperty, $value, $value2) {
+  margin-#{$property}: $value;
+  margin-#{$ltrproperty}: $value2;
+
+  [dir=rtl] & {
+    margin-#{$ltrproperty}: $value;
+    margin-#{$property}: $value2;
+  }
+}
+
+@mixin rtl-padding($property, $ltrproperty, $value, $value2) {
+  padding-#{$property}: $value;
+  padding-#{$ltrproperty}: $value2;
+
+  [dir=rtl] & {
+    padding-#{$ltrproperty}: $value;
+    padding-#{$property}: $value2;
+  }
+}
+
+@mixin textAlign($property, $property2) {
+  text-align: $property;
+
+  [dir=rtl] & {
+    text-align: $property2;
+  }
+}
+
+//fonts
+
+@mixin defaultFont {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #000;
+}
+
+@mixin textFont {
+  font-style: normal;
+  font-weight: 400;
+  font-size: $size;
+  line-height: 1.5;
+  color: $text;
+}
+
+body {
+  @include defaultFont;
+}
+
+@mixin title {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: $main-color;
+  strong {
+    font-weight: inherit;
+    color: $blue;
+  }
+}
+
+@mixin mainTitle {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 1.3;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin subtitle {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color: #000;
+}
+
+
+//done px
+
+
+.modal-window {
+  //display: none;
+}

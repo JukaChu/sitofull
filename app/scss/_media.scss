@@ -1,0 +1,14 @@
+
+
+@function vw($px-vw, $base-vw: 1920px) {
+  @return ($px-vw * 100vw) / $base-vw
+}
+
+@media screen and (max-width: 1920px) {
+
+  body, html {
+    font-size: vw(20px);
+  }
+
+
+}
