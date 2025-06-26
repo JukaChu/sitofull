@@ -334,5 +334,72 @@ if (phoneMaskItems.length) {
 }
 
 
+var player3;
 
+function createVideo(videoBlockId, videoId, btn) {
+    player3 = new YT.Player(videoBlockId, {
+        videoId: videoId,
+        playerVars: {
+            // 'autoplay':1,
+            'autohide': 1,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1,
+            'playsinline': 1,
+            'fs': 1,
+            'allowsInlineMediaPlayback': true
+        },
+        events: {
+            'onReady': function (e) {
+                // e.target.mute();
+                // if ($(window).width() > 991) {
+
+                e.target.playVideo();
+
+                // }
+            },
+
+        }
+    });
+}
+
+let botSlides = [...document.querySelectorAll('.play-btn')];
+var player2;
+
+$('body').on('click', '.play-btn', function (e) {
+    let btn = this;
+    let type = btn.dataset.videoType;
+    let id = btn.dataset.videoId;
+    let modalVideo = $('.modal-window--video')[0];
+    // console.log(modalVideo);
+    let videoId = id;
+    document.body.classList.add('no-scroll');
+    modalVideo.classList.add('visible');
+
+    if (type === 'vimeo') {
+        player2 = new Vimeo.Player($('.modal-window--video .video-container').html(
+            '<iframe class="video-iframe" allow="autoplay" src="https://player.vimeo.com/video/' +
+            videoId +
+            '?playsinline=1&autoplay=1&transparent=1&api=1">'
+        ));
+        player2.play();
+        // btn.classList.add('pause');
+
+    } else {
+
+        if (type === 'video') {
+
+            let videoBl = document.createElement('video');
+            videoBl.src = id;
+            videoBl.playsinline = true;
+            videoBl.controls = true;
+            modalVideo.querySelector('.video-container').append(videoBl);
+            videoBl.play();
+        } else {
+
+            $('.modal-window--video .video-container').append('<div class="video-iframe" id="' + videoId + '"></div>');
+            createVideo(videoId, videoId, btn);
+        }
+    }
+});
 

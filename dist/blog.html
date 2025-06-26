@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preload"
+          href="./fonts/pobeda/Pobeda-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+    <link rel="preload"
+          href="./fonts/pobeda/Pobeda-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-cont">
+            <div class="logo">
+                <a href="">
+                    <img src="./img/lg1.svg" alt="">
+                </a>
+            </div>
+
+            <div class="header-menu">
+                <div class="menu">
+
+                    <ul>
+                        <li><a href="">продукція</a></li>
+                        <li><a href="">про нас</a></li>
+                        <li><a href="">про нас</a></li>
+                        <li><a href="">для бізнесу</a></li>
+                        <li><a href="">пекарні</a></li>
+                        <li><a href="">контакти</a></li>
+                    </ul>
+                </div>
+                <a href="" class="btn-call">
+                    <div class="ic">
+                        <img src="./img/crous1.svg" alt="">
+                    </div>
+                    +38 (066) 874 66 23
+                </a>
+                <div class="scs">
+                    <a href="" style="--ic: url('../img/instaic.svg')" target="_blank"></a>
+                    <a href="" style="--ic: url('../img/fabic.svg')" target="_blank"></a>
+                </div>
+            </div>
+
+            <div class="burger mob-only">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="breadcrumbs-block">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="">Головна</a></li>
+                <li><span>Блог</span></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        if (document.querySelector('.header')) {
+            document.querySelector('.header').classList.add('dark-type');
+        }
+    </script>
+    <section class="blog">
+        <div class="container">
+            <div class="blog__head">
+                <h1 class="subttl">Блог</h1>
+
+                <div class="blog__tags">
+                    <span>Теги</span>
+                    <div class="blog__tags-list">
+                        <a href="" class="is-current">Всі</a>
+                        <a href="">Заморожена продукція</a>
+                        <a href="">кекс</a>
+                        <a href="">Хліб</a>
+                        <a href="">круасан</a>
+                        <a href="">випічка</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog__cont">
+                <div class="blog__list">
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog1.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Як заморожена випічка зберігає свіжість та аромат?</span>
+                            <p>Технологія шокової заморозки: секрети збереження смаку та текстури випічки.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog2.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Готова випічка для кафе та ресторанів – економія часу та ресурсів</span>
+                            <p>Як заморожена випічка допомагає оптимізувати роботу закладу без втрати якості.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog3.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Заморожена vs свіжа випічка: у чому різниця?</span>
+                            <p>Порівняння двох видів випічки: що обрати для дому та бізнесу.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog4.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Як швидко приготувати ідеальну випічку вдома?</span>
+                            <p>Прості поради для ідеальної випічки: від температурного режиму до часу випікання.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog1.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Як заморожена випічка зберігає свіжість та аромат?</span>
+                            <p>Технологія шокової заморозки: секрети збереження смаку та текстури випічки.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog2.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Готова випічка для кафе та ресторанів – економія часу та ресурсів</span>
+                            <p>Як заморожена випічка допомагає оптимізувати роботу закладу без втрати якості.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog3.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Заморожена vs свіжа випічка: у чому різниця?</span>
+                            <p>Порівняння двох видів випічки: що обрати для дому та бізнесу.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog4.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Як швидко приготувати ідеальну випічку вдома?</span>
+                            <p>Прості поради для ідеальної випічки: від температурного режиму до часу випікання.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog1.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Як заморожена випічка зберігає свіжість та аромат?</span>
+                            <p>Технологія шокової заморозки: секрети збереження смаку та текстури випічки.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog2.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Готова випічка для кафе та ресторанів – економія часу та ресурсів</span>
+                            <p>Як заморожена випічка допомагає оптимізувати роботу закладу без втрати якості.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog3.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Заморожена vs свіжа випічка: у чому різниця?</span>
+                            <p>Порівняння двох видів випічки: що обрати для дому та бізнесу.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog4.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Як швидко приготувати ідеальну випічку вдома?</span>
+                            <p>Прості поради для ідеальної випічки: від температурного режиму до часу випікання.</p>
+                        </div>
+                    </a>
+
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog1.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Як заморожена випічка зберігає свіжість та аромат?</span>
+                            <p>Технологія шокової заморозки: секрети збереження смаку та текстури випічки.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog2.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Готова випічка для кафе та ресторанів – економія часу та ресурсів</span>
+                            <p>Як заморожена випічка допомагає оптимізувати роботу закладу без втрати якості.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog3.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Заморожена vs свіжа випічка: у чому різниця?</span>
+                            <p>Порівняння двох видів випічки: що обрати для дому та бізнесу.</p>
+                        </div>
+                    </a>
+                    <a href="" class="blog__single">
+                        <div class="img">
+                            <img src="./img/blog4.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <div class="tg">
+                                <div class="ic">
+                                    <img src="./img/calendaric.svg" alt="">
+                                </div>
+                                10.03.2025
+                            </div>
+                            <span>Як швидко приготувати ідеальну випічку вдома?</span>
+                            <p>Прості поради для ідеальної випічки: від температурного режиму до часу випікання.</p>
+                        </div>
+                    </a>
+                </div>
+                <a href="" class="btn btn--orange" style="--ic: url('../img/showmore.svg');">ПЕРЕГЛЯНУТИ БІЛЬШЕ</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__cont">
+            <div class="footer__logo">
+                <div class="logo">
+                    <a href="">
+                        <img src="./img/logf.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <span class="footer__title">Каталог товарів</span>
+                <ul>
+                    <li><a href="">Кондитерські вироби</a></li>
+                    <li><a href="">Листково-дріжджові вироби</a></li>
+                    <li><a href="">Хлібо - булочні вироби</a></li>
+                    <li><a href="">Напівфабрикати</a></li>
+                </ul>
+
+            </div>
+            <div class="footer__menu">
+                <span class="footer__title">для клієнта</span>
+                <ul>
+                    <li><a href="">Про нас</a></li>
+                    <li><a href="">Доставка та оплата</a></li>
+                    <li><a href="">Повернення та обмін</a></li>
+                    <li><a href="">Контакти</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer__socs">
+                <span class="footer__title">контакти сито </span>
+                <a href="" class="mail">syto.bakery@gmail.com</a>
+                <a href="" class="btn-call">
+                    <div class="ic">
+                        <img src="./img/crous1.svg" alt="">
+                    </div>
+                    +38 (066) 874 66 23
+                </a>
+                <div class="scs">
+                    <a href="" style="--ic: url('../img/instaic.svg')" target="_blank"></a>
+                    <a href="" style="--ic: url('../img/fabic.svg')" target="_blank"></a>
+                </div>
+
+            </div>
+        </div>
+        <a href="" class="footer__powered" target="_blank">
+            powered by <strong>no_name</strong>
+        </a>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./libs/mskinput.js"></script>
+<script class="main-script" src="./js/scripts.min.js"></script>
+</body>
+</html>

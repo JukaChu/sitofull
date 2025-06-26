@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preload"
+          href="./fonts/pobeda/Pobeda-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+    <link rel="preload"
+          href="./fonts/pobeda/Pobeda-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+//= details/header.html
+<main>
+    <div class="breadcrumbs-block">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="">Головна</a></li>
+                <li><span>Пекарні «Сито»</span></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        if (document.querySelector('.header')) {
+            document.querySelector('.header').classList.add('dark-type');
+        }
+    </script>
+
+    <section class="delivery-hero">
+        <div class="delivery-hero__bg">
+            <div class="mp">
+                <img src="./img/delmp.png" alt="">
+            </div>
+            <div class="car">
+                <img src="./img/delcar.png" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="delivery-hero__cont">
+                <h1 class="subttl">Оплата та доставка</h1>
+                <div class="delivery-hero__list">
+                    <div class="delivery-hero__item">
+                        <div class="ic">
+                            <img src="./img/del1.svg" alt="">
+                        </div>
+                        <p><strong>Доставка продукції</strong><br>
+                            ми здійснюємо власним рефрижераторним транспортом, який підтримує стабільну температуру
+                            -18°C, забезпечуючи високу якість товарів.</p>
+                    </div>
+                    <div class="delivery-hero__item">
+                        <div class="ic">
+                            <img src="./img/del2.svg" alt="">
+                        </div>
+                        <p><strong>Мінімальне замовлення</strong><br>
+                            для доставки розраховується індивідуально залежно від вашої локації. Кожен регіон має чіткий
+                            графік поставок.</p>
+                    </div>
+                    <div class="delivery-hero__item">
+                        <div class="ic">
+                            <img src="./img/del3.svg" alt="">
+                        </div>
+                        <p><strong>Оплата першого замовлення</strong><br>
+                            проводиться по факту доставки. Для подальших замовлень умови оплати обговорюються
+                            індивідуально.</p>
+                    </div>
+                </div>
+                <p>Щоб дізнатися графік доставок і вартість мінімального замовлення, залиште заявку на консультацію.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="delivery-form">
+        <div class="container">
+            <div class="delivery-form__cont">
+                <div class="delivery-form__left">
+                    <div class="tg">
+                        <div class="tg-wrp">
+                            <div class="ic">
+                                <img src="./img/delfic.svg" alt="">
+                            </div>
+                            <p>отримайте дегустаційний набір в подарунок!</p>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="./img/delf1.png" alt="">
+                    </div>
+                </div>
+                <div class="delivery-form__right">
+                    <div class="contact-us__form">
+                        <span class="subttl">Зробіть перше замовлення </span>
+                        <p>Якщо вам важко визначитися з потрібним асортиментом, просто залиште заявку нижче. Наш
+                            менеджер зв'яжеться з вами і допоможе зробити вибір та оформити замовлення.</p>
+                        <p>Якщо ж у вас є конкретні побажання, зазначте їх у коментарях і ми узгодимо вашу заявку
+                            найближчим часом.</p>
+                        <div class="form">
+                            <form action="">
+                                <div class="input-wrap">
+                                    <input type="text" placeholder="Імʼя">
+                                </div>
+                                <div class="input-wrap input-tel">
+                                    <input type="tel" placeholder="+38">
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" placeholder="Email">
+                                </div>
+                                <div class="input-wrap">
+                                    <textarea name="" id="" placeholder="Зазначте ваші коментарі"></textarea>
+                                </div>
+                                <button class="btn btn--orange" style="--ic: url('../img/delform.svg');">
+                                    Зробити перше замовлення
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-types">
+        <div class="container">
+            <div class="about-types__cont">
+                <a href="" class="home-types__item">
+                    <div class="img">
+                        <img src="./img/abt1.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>франшиза</span>
+                        <div class="arr"></div>
+                    </div>
+                </a>
+                <a href="" class="home-types__item">
+                    <div class="img">
+                        <img src="./img/abt2.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>випічка для бізнесу</span>
+                        <div class="arr"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+//= details/footer.html
+//= details/scripts.html
+</body>
+</html>

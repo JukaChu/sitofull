@@ -3,11 +3,10 @@
 }
 
 .text-block {
-  font-family: $second-font;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.4;
   font-size: 0.8rem;
-  color: #fff;
+  color: $main-color;
 
   a {
     text-decoration: underline;
@@ -16,7 +15,7 @@
   }
 
   *:not(img, ul, ol, li, blockquote, span, strong, br, iframe) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
   }
 
@@ -40,19 +39,20 @@
   h4,
   h5,
   h6 {
+    font-family: $second-font;
     font-weight: 700;
-    line-height: 1.21;
-    color: #fff;
+    line-height: 1.4;
+    color: $main-color;
 
   }
 
 
   h1 {
-    font-size: 3.3rem;
+    font-size: 2.4rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   h3 {
@@ -81,13 +81,14 @@
 
   blockquote {
     font-family: $second-font;
-    background: $cream;
+    border-color: 0.1rem solid $cream;
+    background: rgba(255, 255, 255, 0);
     border-radius: 1rem;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.3;
     text-align: center;
-    color: #fff;
+    color: $main-color;
     padding: 2.5rem 4rem;
     position: relative;
     z-index: 2;
@@ -120,7 +121,7 @@
 
   .alignleft {
     float: left;
-    margin-right: 2rem;
+    margin-right: 3rem;
   }
 
   .alignright {
@@ -134,8 +135,8 @@
 
   ol, ul {
     li {
-      line-height: 1.6;
-      margin-bottom: 0.1rem;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
 
       &:last-child {
         margin-bottom: 0;
@@ -145,6 +146,11 @@
 
   ul {
     margin-bottom: 0.5rem;
+    li::marker {
+      content: '●';
+      color: $cream;
+
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -156,14 +162,14 @@
       z-index: 2;
 
       &::after {
-        content: "";
+        //content: "";
         position: absolute;
-        top: 0.5rem;
+        top: 0.55rem;
         left: 0;
-        background: $blue;
+        background: $cream;
         border-radius: 50%;
-        width: 0.25rem;
-        height: 0.25rem;
+        width: 0.3rem;
+        height: 0.3rem;
       }
 
       ol {
@@ -209,11 +215,11 @@
       &::before {
         counter-increment: numOl;
         content: counters(numOl, '.') '.';
-        font-weight: inherit;
         font-size: inherit;
         line-height: inherit;
         color: inherit;
         margin-right: 0.3rem;
+        font-weight: 700;
       }
 
       ol {
@@ -235,6 +241,9 @@
       }
     }
   }
+  video, iframe {
+    max-width: 100%;
+  }
 }
 
 @function vw($px-vw, $base-vw: 393px) {
@@ -244,26 +253,28 @@
 @media screen and (max-width: 767px) {
 
   .text-block {
-    font-size: 0.8rem;
-
+    font-size: 0.65rem;
+    p,li {
+      font-size: 0.65rem;
+    }
     h1 {
-      font-size: 1.4rem;
-    }
-
-    h2 {
-      font-size: 1.3rem;
-    }
-
-    h3 {
       font-size: 1.2rem;
     }
 
+    h2 {
+      font-size: 0.8rem;
+    }
+
+    h3 {
+      font-size: 0.75rem;
+    }
+
     h4 {
-      font-size: 1.1rem;
+      font-size: 0.7rem;
     }
 
     h5, h6 {
-      font-size: 0.9rem;
+      font-size: 0.65rem;
     }
 
     *:not(img, ul, ol, li, blockquote, span, strong, br, iframe) {
@@ -273,7 +284,7 @@
 
     ol, ul {
       li {
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.8rem;
       }
     }
 
@@ -290,7 +301,7 @@
         z-index: 2;
 
         &::after {
-          content: "";
+          //content: "";
           position: absolute;
           top: 0.55rem;
           left: 0;
@@ -304,7 +315,7 @@
 
     blockquote {
       width: 100%;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       padding: 1.5rem 1rem;
       border-radius: 0.5rem;
       margin-left: 0;
@@ -320,5 +331,8 @@
         right: 0.25rem;
       }
     }
+  }
+  .text-block img {
+    margin-bottom: 0.75rem;
   }
 }
