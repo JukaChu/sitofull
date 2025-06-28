@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
 @function vw($px-vw, $base-vw: 1400px) {
-  @return ($px-vw * 100vw) / $base-vw
+    @return ($px-vw * 100vw) / $base-vw
 }
 
 $main-font: "Helvetica", sans-serif;
 $second-font: "Pobeda", sans-serif;
+$third-font: "Bad Script", cursive;
 
 
 $main-color: #000;
@@ -32,116 +35,116 @@ $bord: #F4EFE9;
 $size: 20px;
 
 @mixin overFlow {
-  overflow: hidden;
-  backface-visibility: hidden;
-  appearance: none;
+    overflow: hidden;
+    backface-visibility: hidden;
+    appearance: none;
 }
 
 @mixin flexStart {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 @mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @mixin flexCenterH {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 @mixin flexCenterV {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 @mixin rtl-margin($property, $ltrproperty, $value, $value2) {
-  margin-#{$property}: $value;
-  margin-#{$ltrproperty}: $value2;
+    margin-#{$property}: $value;
+    margin-#{$ltrproperty}: $value2;
 
-  [dir=rtl] & {
-    margin-#{$ltrproperty}: $value;
-    margin-#{$property}: $value2;
-  }
+    [dir=rtl] & {
+        margin-#{$ltrproperty}: $value;
+        margin-#{$property}: $value2;
+    }
 }
 
 @mixin rtl-padding($property, $ltrproperty, $value, $value2) {
-  padding-#{$property}: $value;
-  padding-#{$ltrproperty}: $value2;
+    padding-#{$property}: $value;
+    padding-#{$ltrproperty}: $value2;
 
-  [dir=rtl] & {
-    padding-#{$ltrproperty}: $value;
-    padding-#{$property}: $value2;
-  }
+    [dir=rtl] & {
+        padding-#{$ltrproperty}: $value;
+        padding-#{$property}: $value2;
+    }
 }
 
 @mixin textAlign($property, $property2) {
-  text-align: $property;
+    text-align: $property;
 
-  [dir=rtl] & {
-    text-align: $property2;
-  }
+    [dir=rtl] & {
+        text-align: $property2;
+    }
 }
 
 //fonts
 
 @mixin defaultFont {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 1.4;
-  color: #000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #000;
 }
 
 @mixin textFont {
-  font-style: normal;
-  font-weight: 400;
-  font-size: $size;
-  line-height: 1.5;
-  color: $text;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $size;
+    line-height: 1.5;
+    color: $text;
 }
 
 body {
-  @include defaultFont;
+    @include defaultFont;
 }
 
 @mixin title {
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 1.1;
-  color: $main-color;
-  strong {
-    font-weight: inherit;
-    color: $blue;
-  }
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.1;
+    color: $main-color;
+    strong {
+        font-weight: inherit;
+        color: $blue;
+    }
 }
 
 @mixin mainTitle {
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 4rem;
-  line-height: 1.3;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 1.3;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 @mixin subtitle {
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 2.5rem;
-  line-height: 1.5;
-  color: #000;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #000;
 }
 
 
@@ -149,5 +152,5 @@ body {
 
 
 .modal-window {
-  //display: none;
+    //display: none;
 }

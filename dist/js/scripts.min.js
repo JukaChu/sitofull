@@ -300,6 +300,160 @@ function startCertificatesSlider() {
 
 startCertificatesSlider();
 
+let catalogSlider = [...document.querySelectorAll('.slider-catalog')];
+
+function startCatalogSlider() {
+    if (catalogSlider.length) {
+        catalogSlider.forEach((sld) => {
+
+
+            let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+            let pagin = sld.querySelector('.dots');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                grabCursor: true,
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                speed: 600,
+                effect: false,
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: false,
+
+                touchReleaseOnEdges: false,
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: false,
+
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: false,
+                spaceBetween: 10,
+                pagination: {
+                    el: pagin,
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 0,
+                },
+                breakpoints: {
+                    767: {
+                        spaceBetween: 20,
+                        slidesPerView: 4,
+                    }
+                }
+
+
+            });
+
+
+        })
+    }
+}
+
+startCatalogSlider();
+
+let productSlider = [...document.querySelectorAll('.product-page__sliders')];
+
+function startProductSlider() {
+    if (productSlider.length) {
+        productSlider.forEach((sld) => {
+            if (!sld.classList.contains('no-slider')) {
+
+
+                let sldCont = sld.querySelector('.product-page__main .swiper');
+                let sldThumb = sld.querySelector('.product-page__thumbs .swiper');
+
+                let sldNext = sld.querySelector('.slider-btn--next');
+                let sldPrev = sld.querySelector('.slider-btn--prev');
+                let pagin = sld.querySelector('.dots');
+
+                var swiperThumb = new Swiper(sldThumb, {
+                    speed: 600,
+                    slidesPerView: 3,
+                    slidesPerGroup: 1,
+                    grabCursor: false,
+                    direction: 'horizontal',
+                    loop: false,
+                    draggable: true,
+                    allowTouchMove: true,
+                    touchMoveStopPropagation: true,
+                    touchStartPreventDefault: true,
+                    centeredSlides: false,
+                    spaceBetween: 6,
+                    resistance: true,
+                    resistanceRatio: 0.3,
+                    centeredSlidesBounds: true,
+                    // initialSlide: 2,
+                    slideToClickedSlide: true,
+                    cssMode: false,
+                    breakpoints: {
+                        767: {
+                            direction: 'vertical',
+                            spaceBetween: 30,
+                            slidesPerView: 5,
+                        }
+                    }
+
+                });
+                const swiper2 = new Swiper(sldCont, {
+                    // Optional parameters
+                    loop: false,
+                    thumbs: {
+                        swiper: swiperThumb,
+                    },
+                    grabCursor: true,
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    speed: 600,
+                    effect: false,
+                    followFinger: true,
+                    allowTouchMove: true,
+                    threshold: false,
+
+                    touchReleaseOnEdges: false,
+                    resistance: true,
+                    resistanceRatio: 0.3,
+                    cssMode: false,
+
+                    navigation: {
+                        nextEl: sldNext,
+                        prevEl: sldPrev,
+                    },
+                    autoplay: false,
+                    spaceBetween: 0,
+                    rtl: true,
+                    pagination: {
+                        el: pagin,
+                        type: 'bullets',
+                        bulletActiveClass: 'active',
+                        bulletClass: 'single-dot',
+                        bulletElement: 'div',
+                        clickable: true,
+                        currentClass: 'current',
+                        spaceBetween: 0,
+                    },
+
+
+
+                });
+
+            }
+        })
+    }
+}
+
+startProductSlider();
+
 // sliders
 
 $('.single-faq__head').click(function () {
@@ -403,3 +557,56 @@ $('body').on('click', '.play-btn', function (e) {
     }
 });
 
+
+// howworks
+let itemsWorks = [...document.querySelectorAll('.how-works__item')];
+if (itemsWorks.length) {
+    let currentWorks = 0;
+
+    itemsWorks[currentWorks].classList.add('active');
+    setInterval(() => {
+        itemsWorks[currentWorks].classList.remove('active');
+        currentWorks = (currentWorks + 1) % itemsWorks.length;
+        itemsWorks[currentWorks].classList.add('active');
+    }, 3000);
+}
+
+// tabs
+
+let ownerTabs = [...document.querySelectorAll('.tabs-owner')];
+
+function controlTabs() {
+    if (ownerTabs.length) {
+        ownerTabs.forEach((tab) => {
+            let tabOpen = [...tab.querySelectorAll('.tab-btn')];
+            let singleTab = [...tab.querySelectorAll('.single-tab')];
+
+            tabOpen.forEach((btn, k) => {
+                btn.addEventListener('click', () => {
+                    if (!btn.classList.contains('active')) {
+                        tabOpen.forEach((btn2) => {
+                            btn2.classList.remove('active');
+                        });
+                        singleTab.forEach((btn3) => {
+                            btn3.classList.remove('active');
+                        });
+                        btn.classList.add('active');
+                        singleTab[k].classList.add('active');
+                    }
+                })
+            });
+            singleTab.forEach((tab, l) => {
+                if (tab.querySelector('.single-tab__head')) {
+                    tab.querySelector('.single-tab__head').addEventListener('click', () => {
+                        tabOpen[l].click();
+                    })
+                }
+
+            })
+        })
+    }
+}
+
+controlTabs();
+
+// tabs
