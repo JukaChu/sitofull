@@ -99,6 +99,7 @@ controlScrollBtn();
 
 
 let contactUsSec = [...document.querySelectorAll('.contact-us')];
+
 function controlFormContact() {
     if (contactUsSec.length) {
         contactUsSec.forEach((sec) => {
@@ -444,7 +445,6 @@ function startProductSlider() {
                     },
 
 
-
                 });
 
             }
@@ -453,6 +453,66 @@ function startProductSlider() {
 }
 
 startProductSlider();
+
+
+let bakeriesSlider = [...document.querySelectorAll('.bakeries__right')];
+
+function startBakeriesSlider() {
+    if (bakeriesSlider.length) {
+        bakeriesSlider.forEach((sld) => {
+
+
+            let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+            let pagin = sld.querySelector('.dots');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                grabCursor: true,
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
+                speed: 600,
+                effect: false,
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: false,
+
+                touchReleaseOnEdges: false,
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: false,
+
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: false,
+                spaceBetween: 5,
+                pagination: {
+                    el: pagin,
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 0,
+                },
+                breakpoints: {
+                    767: {
+                        spaceBetween: 10,
+                    }
+                }
+
+
+            });
+        })
+    }
+}
+
+startBakeriesSlider();
 
 // sliders
 
@@ -522,8 +582,8 @@ var player2;
 
 $('body').on('click', '.play-btn', function (e) {
     let btn = this;
-    let type = btn.dataset.videoType;
-    let id = btn.dataset.videoId;
+    let type = btn.dataset.type;
+    let id = btn.dataset.id;
     let modalVideo = $('.modal-window--video')[0];
     // console.log(modalVideo);
     let videoId = id;
@@ -610,3 +670,107 @@ function controlTabs() {
 controlTabs();
 
 // tabs
+
+let btnMod = [...document.querySelectorAll('.btn-mod')];
+let modals = [...document.querySelectorAll('.modal-window')];
+let btnClose = [...document.querySelectorAll('.btn-close')];
+let clsSecModal = [...document.querySelectorAll('.modal-window .cls')];
+let backplates = [...document.querySelectorAll('.backplate')];
+
+function controlModal() {
+    if (btnMod.length) {
+        btnMod.forEach((btn) => {
+            let data = btn.dataset.mod;
+
+            btn.addEventListener('click', (e) => {
+
+                e.preventDefault();
+                e.stopPropagation();
+
+
+                modals.forEach((mod) => {
+
+                    if (mod.dataset.modal === data) {
+                        header.classList.remove('active');
+                        document.body.classList.add('no-scroll');
+                        if (data === 'discount') {
+                            let img = btn.querySelector('.data-modal .img').innerHTML;
+                            let txt = btn.querySelector('.data-modal .txt').innerHTML;
+                            let bt = btn.querySelector('.txt').innerHTML;
+                            let tt = btn.querySelector('.data-modal .ttl').innerHTML;
+                            let lnk = btn.querySelector('.data-modal .lnk').href;
+
+                            let modImg = mod.querySelector('.modal-cont__top .img');
+                            let modTtl = mod.querySelector('.modal-discount .subttl');
+                            let modTxt = mod.querySelector('.modal-discount .txt');
+                            let modBt = mod.querySelector('.modal-discount .bt-block');
+                            let modLnk = mod.querySelector('.modal-discount .btn');
+
+                            modImg.innerHTML = img;
+                            modTtl.innerHTML = tt;
+                            modTxt.innerHTML = txt;
+                            modBt.innerHTML = bt;
+                            modLnk.href = lnk;
+
+                        }
+                        if (document.querySelector('.modal-window.visible')) {
+                            document.querySelector('.modal-window.visible').classList.remove('visible');
+                        }
+                        mod.classList.add('visible');
+                        burger.forEach((brg) => {
+                            brg.classList.remove('active');
+                        })
+
+                    }
+                });
+
+            })
+        });
+    }
+
+    if (backplates.length) {
+        backplates.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.modal-window').classList.remove('visible');
+                document.body.classList.remove('no-scroll');
+                if (btn.closest('.modal-window').classList.contains('modal-window--video')) {
+                    btn.closest('.modal-window').querySelector('.video-container').innerHTML = '';
+                }
+
+            })
+        });
+    }
+    if (btnClose.length) {
+        btnClose.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.closest('.modal-window').classList.remove('visible');
+                document.body.classList.remove('no-scroll');
+
+
+            })
+        });
+    }
+    if (clsSecModal.length) {
+        clsSecModal.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.closest('.modal-window').classList.remove('visible');
+                document.body.classList.remove('no-scroll');
+
+            })
+        });
+
+
+    }
+}
+
+controlModal();
+$('body').on('click', '.btn-close', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $('.modal-window.visible').removeClass('visible');
+    document.body.classList.remove('no-scroll');
+})

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preload"
+          href="./fonts/pobeda/Pobeda-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+    <link rel="preload"
+          href="./fonts/pobeda/Pobeda-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <script type="text/javascript" id="www-widgetapi-script"
+            src="https://www.youtube.com/s/player/0af6e327/www-widgetapi.vflset/www-widgetapi.js" async=""></script>
+    <script src="https://www.youtube.com/player_api"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+<body>
+//= details/header.html
+<main>
+    <div class="breadcrumbs-block">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="">Головна</a></li>
+                <li><span>Пекарні «Сито»</span></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        if (document.querySelector('.header')) {
+            document.querySelector('.header').classList.add('dark-type');
+        }
+    </script>
+
+    <section class="bakeries">
+        <div class="container">
+            <div class="bakeries__cont">
+                <div class="bakeries__top">
+                    <h1 class="subttl">пекарні «Сито»</h1>
+                    <div class="bakeries__text">
+                        <div class="txt">
+                            <p>Мережа пекарень «Сито» — це ваш надійний супутник у світі смачної випічки. Де б ви не
+                                знаходилися — на роботі, навчанні чи на прогулянці - «Сито» завжди поруч, щоб
+                                потурбуватись про ваш перекус. Всього 10 хвилин між справами, чи приємна перерва з
+                                друзями - наша пекарня завжди готова запропонувати свіжу, ароматну випічку та гарячу
+                                каву.</p>
+                        </div>
+                        <div class="txt">
+                            <p>Мережа «Сито» об’єднує пекарні у різних куточках України та продовжує розширювати свою
+                                мережу, щоб вам було зручно насолоджуватися улюбленими смаколиками там, де вам потрібно.
+                                Ми дбаємо не тільки про смак, а й про якість. Продукція “Сито” — це перевірені та
+                                вдосконалені рецепти таких знайомих всім смаколиків, які ми виготовляємо на власному
+                                виробництві починаючи з 2017 року.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bakeries__bot">
+                    <div class="txt">
+                        <p>«Сито» — це ваша найближча пекарня, де кожен перекус стає справжнім задоволенням.</p>
+                        <a href="" class="btn btn--orange scroll-to" data-to="bakeries" style="--ic: url('../img/arrbots.svg');" download>
+                            Переглянути наші локації
+                        </a>
+                    </div>
+                    <div class="bakeries__right">
+                        <div class="btns">
+                            <div class="slider-btn slider-btn--prev"></div>
+                            <div class="slider-btn slider-btn--next"></div>
+                        </div>
+                        <div class="bakeries__slider-wrap">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="img">
+                                            <img src="./img/baks1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img">
+                                            <img src="./img/baks2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img">
+                                            <img src="./img/bak3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bakeries-maps">
+        <div class="container">
+            <div class="bakeries-maps__cont">
+                <div class="info_block">
+                    <h2 class="subttl">Пекарні Сито</h2>
+                    <div class="addr-inp">
+                        <div class="input-row">
+                            <label for="regionSelect">Область</label>
+                            <select name="" id="regionSelect"> </select>
+                            <span class="selected-value"></span>
+                            <ul id="regionSelect2"></ul>
+
+                        </div>
+                        <div class="input-row">
+                            <label for="citySelect">Населений пункт</label>
+                            <select name="" id="citySelect"> </select>
+                            <span class="selected-value"></span>
+                            <ul id="citySelect2"></ul>
+                        </div>
+                    </div>
+                    <div class="shop-address" id="addr-result">
+                        <div class="shop-address__item">
+                            <div class="shop-address__info">
+                                <div class="shop-address__title"></div>
+                                <div class="shop-address__text"></div>
+                                <a class="shop-address__link" target="_blank"
+                                   href="https://maps.google.com?saddr=Current+Location&amp;daddr=49.379379940926235,33.270501844758705">Прокласти
+                                    маршрут</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-block" id="map_canvas"></div>
+            </div>
+        </div>
+        <div class="bakeries-list" style="display: none;">
+            <ul>
+                <li>
+                    <div class="id">7</div>
+                    <div class="street">вул.Руська, 263/а</div>
+                    <div class="address">м.Чернівці вул.Руська, 263/а</div>
+                    <div class="content">
+                        <p>Графік роботи:</p>
+                        <p><span>понеділок</span><span>07:00–19:00</span></p>
+                        <p><span>вівторок</span><span>07:00–19:00</span></p>
+                        <p><span>середа</span><span>07:00–19:00</span></p>
+                        <p><span>четвер</span><span>07:00–19:00</span></p>
+                        <p><span>пʼятниця</span><span>07:00–19:00</span></p>
+                        <p><span>субота</span><span>07:00–19:00</span></p>
+                        <p><span>неділя</span><span>07:00–19:00</span></p>
+                    </div>
+                    <div class="region">Чернівецька область</div>
+                    <div class="city">Чернівці</div>
+                </li>
+                <li>
+                    <div class="id">8</div>
+                    <div class="street">вул.Чорноморська, 4/А</div>
+                    <div class="address">м.Чернівці вул.Чорноморська, 4/А</div>
+                    <div class="content">
+                        <p>Графік роботи:</p>
+                        <p><span>понеділок</span><span>08:00–20:00</span></p>
+                        <p><span>вівторок</span><span>08:00–20:00</span></p>
+                        <p><span>середа</span><span>08:00–20:00</span></p>
+                        <p><span>четвер</span><span>08:00–20:00</span></p>
+                        <p><span>пʼятниця</span><span>08:00–20:00</span></p>
+                        <p><span>субота</span><span>08:00–20:00</span></p>
+                        <p><span>неділя</span><span>08:00–18:00</span></p>
+                    </div>
+                    <div class="region">Чернівецька область</div>
+                    <div class="city">Чернівці</div>
+                </li>
+                <li>
+                    <div class="id">9</div>
+                    <div class="street">вул.Небесної Сотні, 5А</div>
+                    <div class="address">м.Чернівці вул.Небесної Сотні, 5А</div>
+                    <div class="content">
+                        <p>Графік роботи:</p>
+                        <p><span>понеділок</span><span>08:00–18:00</span></p>
+                        <p><span>вівторок</span><span>08:00–18:00</span></p>
+                        <p><span>середа</span><span>08:00–18:00</span></p>
+                        <p><span>четвер</span><span>08:00–18:00</span></p>
+                        <p><span>пʼятниця</span><span>08:00–18:00</span></p>
+                    </div>
+                    <div class="region">Чернівецька область</div>
+                    <div class="city">Чернівці</div>
+                </li>
+                <li>
+                    <div class="id">10</div>
+                    <div class="street">вул. Героїв Майдану, 1А</div>
+                    <div class="address">м.Чернівці вул. Героїв Майдану, 1А</div>
+                    <div class="content">
+                        <p>Графік роботи:</p>
+                        <p><span>понеділок</span><span>08:00–19:30</span></p>
+                        <p><span>вівторок</span><span>08:00–19:30</span></p>
+                        <p><span>середа</span><span>08:00–19:30</span></p>
+                        <p><span>четвер</span><span>08:00–19:30</span></p>
+                        <p><span>пʼятниця</span><span>08:00–19:30</span></p>
+                        <p><span>субота</span><span>08:00–17:00</span></p>
+                    </div>
+                    <div class="region">Чернівецька область</div>
+                    <div class="city">Чернівці</div>
+                </li>
+                <li>
+                    <div class="id">3</div>
+                    <div class="street">вул.Макаренка, 2</div>
+                    <div class="address">м.Білопілля вул.Макаренка, 2</div>
+                    <div class="content"></div>
+                    <div class="region">Сумська область</div>
+                    <div class="city">Білопілля</div>
+                </li>
+                <li>
+                    <div class="id">4</div>
+                    <div class="street">вул. Руська, 9</div>
+                    <div class="address">м.Берижани вул. Руська, 9</div>
+                    <div class="content"></div>
+                    <div class="region">Тернопільська область</div>
+                    <div class="city">Берижани</div>
+                </li>
+                <li>
+                    <div class="id">5</div>
+                    <div class="street">вул.Харківська, 12</div>
+                    <div class="address">м.Суми вул.Харківська, 12</div>
+                    <div class="content">
+                        <p>Графік роботи:</p>
+                        <p>8:00 - 20:00 (щоденно)</p>
+                    </div>
+                    <div class="region">Сумська область</div>
+                    <div class="city">Суми</div>
+                </li>
+                <li>
+                    <div class="id">6</div>
+                    <div class="street">вул.Заливна, 7</div>
+                    <div class="address">м.Суми вул.Заливна, 7</div>
+                    <div class="content">
+                        <p>Графік роботи:</p>
+                        <p><span>понеділок</span><span>08:00–21:00</span></p>
+                        <p><span>вівторок</span><span>08:00–21:00</span></p>
+                        <p><span>середа</span><span>08:00–21:00</span></p>
+                        <p><span>четвер</span><span>08:00–21:00</span></p>
+                        <p><span>пʼятниця</span><span>08:00–21:00</span></p>
+                        <p><span>субота</span><span>08:00–20:30</span></p>
+                        <p><span>неділя</span><span>08:00–20:30</span></p>
+                    </div>
+                    <div class="region">Сумська область</div>
+                    <div class="city">Суми</div>
+                </li>
+                <li>
+                    <div class="id">11</div>
+                    <div class="street">вул.Шевченка, 44</div>
+                    <div class="address">м.Хмельницький вул.Шевченка, 44</div>
+                    <div class="content">
+                        <p>Графік роботи:</p>
+                        <p><span>понеділок</span><span>07:00–20:00</span></p>
+                        <p><span>вівторок</span><span>07:00–20:00</span></p>
+                        <p><span>середа</span><span>07:00–20:00</span></p>
+                        <p><span>четвер</span><span>07:00–20:00</span></p>
+                        <p><span>пʼятниця</span><span>07:00–20:00</span></p>
+                        <p><span>субота</span><span>08:00–20:00</span></p>
+                        <p><span>неділя</span><span>08:00–20:00</span></p>
+                    </div>
+                    <div class="region">Хмельницька область</div>
+                    <div class="city">Хмельницький</div>
+                </li>
+                <li>
+                    <div class="id">12</div>
+                    <div class="street">вул Авіаконструктора Антонова, 9</div>
+                    <div class="address">м.Київ вул Авіаконструктора Антонова, 9</div>
+                    <div class="content">
+                        <p>Графік роботи:</p>
+                        <p>7:30 - 20:00 (щоденно)</p>
+                    </div>
+                    <div class="region">м.Київ</div>
+                    <div class="city">Київ</div>
+                </li>
+                <li>
+                    <div class="id">13</div>
+                    <div class="street">вул. Тюлівська 8</div>
+                    <div class="address">м. Кути вул. Тюлівська 8</div>
+                    <div class="content"></div>
+                    <div class="region">Івано-Франківська область</div>
+                    <div class="city">Кути</div>
+                </li>
+                <li>
+                    <div class="id">14</div>
+                    <div class="street">вул. Січових Стрільців, 6</div>
+                    <div class="address">м.Коломия вул. Січових Стрільців, 6</div>
+                    <div class="content"></div>
+                    <div class="region">Івано-Франківська область</div>
+                    <div class="city">Коломия</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="about-types">
+        <div class="container">
+            <div class="about-types__cont">
+                <a href="" class="home-types__item">
+                    <div class="img">
+                        <img src="./img/abt1.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>франшиза</span>
+                        <div class="arr"></div>
+                    </div>
+                </a>
+                <a href="" class="home-types__item">
+                    <div class="img">
+                        <img src="./img/abt2.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>випічка для бізнесу</span>
+                        <div class="arr"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+//= details/footer.html
+//= details/scripts.html
+</body>
+</html>

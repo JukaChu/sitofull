@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="uk" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preload"
+          href="./fonts/pobeda/Pobeda-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+    <link rel="preload"
+          href="./fonts/pobeda/Pobeda-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <script type="text/javascript" id="www-widgetapi-script"
+            src="https://www.youtube.com/s/player/0af6e327/www-widgetapi.vflset/www-widgetapi.js" async=""></script>
+    <script src="https://www.youtube.com/player_api"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-cont">
+            <div class="logo">
+                <a href="">
+                    <img src="./img/lg1.svg" alt="">
+                </a>
+            </div>
+
+            <div class="header-menu">
+                <div class="menu">
+
+                    <ul>
+                        <li><a href="">продукція</a></li>
+                        <li><a href="">про нас</a></li>
+                        <li><a href="">про нас</a></li>
+                        <li><a href="">для бізнесу</a></li>
+                        <li><a href="">пекарні</a></li>
+                        <li><a href="">контакти</a></li>
+                    </ul>
+                </div>
+                <a href="" class="btn-call">
+                    <div class="ic">
+                        <img src="./img/crous1.svg" alt="">
+                    </div>
+                    +38 (066) 874 66 23
+                </a>
+                <div class="scs">
+                    <a href="" style="--ic: url('../img/instaic.svg')" target="_blank"></a>
+                    <a href="" style="--ic: url('../img/fabic.svg')" target="_blank"></a>
+                </div>
+            </div>
+
+            <div class="burger mob-only">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="breadcrumbs-block">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li><a href="">Головна</a></li>
+                <li><span>Акції</span></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        if (document.querySelector('.header')) {
+            document.querySelector('.header').classList.add('dark-type');
+        }
+    </script>
+    <section class="home-types home-types--catalog">
+        <div class="container">
+            <div class="home-types__cont">
+                <div class="home-types__top">
+                    <h1 class="subttl">Акції</h1>
+                    <div class="btns">
+                        <a href="" class="btn btn--orange" style="--ic: url('../img/iconpdf.svg');" download>
+                            завантажити каталог
+                        </a>
+                    </div>
+                </div>
+                <div class="catalog-main">
+                    <div class="catalog-main__pages">
+                        <a href="">Кондитерські вироби</a>
+                        <a href="">Листково-дріжджові вироби</a>
+                        <a href="">Хлібо - булочні вироби</a>
+                        <a href="">Напівфабрикати</a>
+                        <a href="">Новинки</a>
+                        <a href="" class="is-current">Акції</a>
+                    </div>
+                    <div class="catalog-main__discount ">
+                        <div class="discount-block btn-mod" data-mod="discount">
+                            <div class="img">
+                                <img class="desk-only" src="./img/dis11.jpg" alt="">
+                                <img class="mob-only" src="./img/dis12.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <div class="bt">
+                                    <div class="ic">
+                                        <img src="./img/discouncal.svg" alt="">
+                                    </div>
+                                    <p><strong>Акція діє:</strong> Постійна акція</p>
+                                </div>
+                            </div>
+                            <div class="data-modal" style="display: none;">
+                                <p class="ttl">“Пробна партія – без ризиків”</p>
+                                <div class="img">
+                                    <img class="desk-only" src="./img/moddis1.jpg" alt="">
+                                    <img class="mob-only" src="./img/moddis2.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p>Не знайомі з нашою продукцією? Ми розуміємо, як важливо бути впевненими у якості
+                                        перед співпрацею! Саме тому ми пропонуємо вам спеціальний пробний набір за
+                                        вигідною ціною. Ви зможете спробувати нашу випічку, оцінити її смак, текстуру та
+                                        якість, перш ніж оформлювати велике замовлення.
+                                        Це чудова можливість мінімізувати ризики та переконатися, що наша продукція
+                                        ідеально підходить для вашого бізнесу. Мінімальні витрати – максимум
+                                        користі!</p>
+                                </div>
+                                <a href="https://google.com" class="lnk"></a>
+                            </div>
+                        </div>
+                        <div class="discount-block btn-mod" data-mod="discount">
+                            <div class="img">
+                                <img class="desk-only" src="./img/dis21.jpg" alt="">
+                                <img class="mob-only" src="./img/dis22.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <div class="bt">
+                                    <div class="ic">
+                                        <img src="./img/discouncal.svg" alt="">
+                                    </div>
+                                    <p><strong>Акція діє:</strong> Постійна акція</p>
+                                </div>
+                            </div>
+                            <div class="data-modal" style="display: none;">
+                                <p class="ttl">“Пробна партія – без ризиків”</p>
+                                <div class="img">
+                                    <img class="desk-only" src="./img/moddis1.jpg" alt="">
+                                    <img class="mob-only" src="./img/moddis2.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p>Не знайомі з нашою продукцією? Ми розуміємо, як важливо бути впевненими у якості
+                                        перед співпрацею! Саме тому ми пропонуємо вам спеціальний пробний набір за
+                                        вигідною ціною. Ви зможете спробувати нашу випічку, оцінити її смак, текстуру та
+                                        якість, перш ніж оформлювати велике замовлення.
+                                        Це чудова можливість мінімізувати ризики та переконатися, що наша продукція
+                                        ідеально підходить для вашого бізнесу. Мінімальні витрати – максимум
+                                        користі!</p>
+                                </div>
+                                <a href="https://google.com" class="lnk"></a>
+                            </div>
+                        </div>
+                        <div class="discount-block btn-mod" data-mod="discount">
+                            <div class="img">
+                                <img class="desk-only" src="./img/dis31.jpg" alt="">
+                                <img class="mob-only" src="./img/dis32.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <div class="bt">
+                                    <div class="ic">
+                                        <img src="./img/discouncal.svg" alt="">
+                                    </div>
+                                    <p><strong>Акція діє:</strong> Постійна акція</p>
+                                </div>
+                            </div>
+                            <div class="data-modal" style="display: none;">
+                                <p class="ttl">“Пробна партія – без ризиків”</p>
+                                <div class="img">
+                                    <img class="desk-only" src="./img/moddis1.jpg" alt="">
+                                    <img class="mob-only" src="./img/moddis2.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <p>Не знайомі з нашою продукцією? Ми розуміємо, як важливо бути впевненими у якості
+                                        перед співпрацею! Саме тому ми пропонуємо вам спеціальний пробний набір за
+                                        вигідною ціною. Ви зможете спробувати нашу випічку, оцінити її смак, текстуру та
+                                        якість, перш ніж оформлювати велике замовлення.
+                                        Це чудова можливість мінімізувати ризики та переконатися, що наша продукція
+                                        ідеально підходить для вашого бізнесу. Мінімальні витрати – максимум
+                                        користі!</p>
+                                </div>
+                                <a href="https://google.com" class="lnk"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider-catalog">
+        <div class="container">
+            <div class="slider-catalog__top">
+                <h2 class="subttl">Найкращі пропозиції</h2>
+                <div class="btns">
+                    <div class="slider-btn slider-btn--prev"></div>
+                    <div class="slider-btn slider-btn--next"></div>
+                </div>
+            </div>
+            <div class="slider-catalog__cont">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="" class="product-card">
+                                <div class="tp">
+                                    <div class="tags">
+
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/prod1.jpg" alt="">
+                                    </div>
+                                    <div class="tp-infos">
+                                        <div class="tp-info">
+                                            <strong>артикул:</strong> 4250951
+                                        </div>
+                                        <div class="tp-info">
+                                            <strong>Штрих код:</strong> 8590325509514
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bt">
+                                    <span class="nm">Ватрушка з творогом</span>
+                                    <div class="bt-info">
+                                        <div class="bt-stats">
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi1.svg" alt="">
+                                                </div>
+                                                0,16 кг
+                                            </div>
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi2.svg" alt="">
+                                                </div>
+                                                40 шт./ящ.
+                                            </div>
+                                        </div>
+                                        <div class="bt-price">
+                                            <p>20.16грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="product-card">
+                                <div class="tp">
+                                    <div class="tags">
+
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/prod2.jpg" alt="">
+                                    </div>
+                                    <div class="tp-infos">
+                                        <div class="tp-info">
+                                            <strong>артикул:</strong> 4250951
+                                        </div>
+                                        <div class="tp-info">
+                                            <strong>Штрих код:</strong> 8590325509514
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bt">
+                                    <span class="nm">Ватрушка з творогом</span>
+                                    <div class="bt-info">
+                                        <div class="bt-stats">
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi1.svg" alt="">
+                                                </div>
+                                                0,16 кг
+                                            </div>
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi2.svg" alt="">
+                                                </div>
+                                                40 шт./ящ.
+                                            </div>
+                                        </div>
+                                        <div class="bt-price">
+                                            <p>20.16грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="product-card">
+                                <div class="tp">
+                                    <div class="tags">
+
+
+                                        <div class="single-tag" style="--bg: #DCF5F9;">
+                                            <p>Новинка</p>
+                                        </div>
+                                        <div class="single-tag" style="--bg: #F9F7DC;">
+                                            <p>хіт продажів</p>
+                                        </div>
+                                        <div class="single-tag" style="--bg: #E1F3BA;">
+                                            <p>Швидке випікання</p>
+                                        </div>
+                                        <div class="single-tag" style="--bg: #F9DCF5;">
+                                            <p>акція</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/prod3.jpg" alt="">
+                                    </div>
+                                    <div class="tp-infos">
+                                        <div class="tp-info">
+                                            <strong>артикул:</strong> 4250951
+                                        </div>
+                                        <div class="tp-info">
+                                            <strong>Штрих код:</strong> 8590325509514
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bt">
+                                    <span class="nm">Ватрушка з творогом</span>
+                                    <div class="bt-info">
+                                        <div class="bt-stats">
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi1.svg" alt="">
+                                                </div>
+                                                0,16 кг
+                                            </div>
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi2.svg" alt="">
+                                                </div>
+                                                40 шт./ящ.
+                                            </div>
+                                        </div>
+                                        <div class="bt-price">
+                                            <p>
+                                                <del>20.16грн</del>
+                                                <ins>20.16грн</ins>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="product-card">
+                                <div class="tp">
+                                    <div class="tags">
+
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/prod2.jpg" alt="">
+                                    </div>
+                                    <div class="tp-infos">
+                                        <div class="tp-info">
+                                            <strong>артикул:</strong> 4250951
+                                        </div>
+                                        <div class="tp-info">
+                                            <strong>Штрих код:</strong> 8590325509514
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bt">
+                                    <span class="nm">Ватрушка з творогом</span>
+                                    <div class="bt-info">
+                                        <div class="bt-stats">
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi1.svg" alt="">
+                                                </div>
+                                                0,16 кг
+                                            </div>
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi2.svg" alt="">
+                                                </div>
+                                                40 шт./ящ.
+                                            </div>
+                                        </div>
+                                        <div class="bt-price">
+                                            <p>20.16грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="product-card">
+                                <div class="tp">
+                                    <div class="tags">
+
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/prod1.jpg" alt="">
+                                    </div>
+                                    <div class="tp-infos">
+                                        <div class="tp-info">
+                                            <strong>артикул:</strong> 4250951
+                                        </div>
+                                        <div class="tp-info">
+                                            <strong>Штрих код:</strong> 8590325509514
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bt">
+                                    <span class="nm">Ватрушка з творогом</span>
+                                    <div class="bt-info">
+                                        <div class="bt-stats">
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi1.svg" alt="">
+                                                </div>
+                                                0,16 кг
+                                            </div>
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi2.svg" alt="">
+                                                </div>
+                                                40 шт./ящ.
+                                            </div>
+                                        </div>
+                                        <div class="bt-price">
+                                            <p>20.16грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="product-card">
+                                <div class="tp">
+                                    <div class="tags">
+
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/prod2.jpg" alt="">
+                                    </div>
+                                    <div class="tp-infos">
+                                        <div class="tp-info">
+                                            <strong>артикул:</strong> 4250951
+                                        </div>
+                                        <div class="tp-info">
+                                            <strong>Штрих код:</strong> 8590325509514
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bt">
+                                    <span class="nm">Ватрушка з творогом</span>
+                                    <div class="bt-info">
+                                        <div class="bt-stats">
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi1.svg" alt="">
+                                                </div>
+                                                0,16 кг
+                                            </div>
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi2.svg" alt="">
+                                                </div>
+                                                40 шт./ящ.
+                                            </div>
+                                        </div>
+                                        <div class="bt-price">
+                                            <p>20.16грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="product-card">
+                                <div class="tp">
+                                    <div class="tags">
+
+
+                                        <div class="single-tag" style="--bg: #DCF5F9;">
+                                            <p>Новинка</p>
+                                        </div>
+                                        <div class="single-tag" style="--bg: #F9F7DC;">
+                                            <p>хіт продажів</p>
+                                        </div>
+                                        <div class="single-tag" style="--bg: #E1F3BA;">
+                                            <p>Швидке випікання</p>
+                                        </div>
+                                        <div class="single-tag" style="--bg: #F9DCF5;">
+                                            <p>акція</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/prod3.jpg" alt="">
+                                    </div>
+                                    <div class="tp-infos">
+                                        <div class="tp-info">
+                                            <strong>артикул:</strong> 4250951
+                                        </div>
+                                        <div class="tp-info">
+                                            <strong>Штрих код:</strong> 8590325509514
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bt">
+                                    <span class="nm">Ватрушка з творогом</span>
+                                    <div class="bt-info">
+                                        <div class="bt-stats">
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi1.svg" alt="">
+                                                </div>
+                                                0,16 кг
+                                            </div>
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi2.svg" alt="">
+                                                </div>
+                                                40 шт./ящ.
+                                            </div>
+                                        </div>
+                                        <div class="bt-price">
+                                            <p>
+                                                <del>20.16грн</del>
+                                                <ins>20.16грн</ins>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="" class="product-card">
+                                <div class="tp">
+                                    <div class="tags">
+
+                                    </div>
+                                    <div class="img">
+                                        <img src="./img/prod2.jpg" alt="">
+                                    </div>
+                                    <div class="tp-infos">
+                                        <div class="tp-info">
+                                            <strong>артикул:</strong> 4250951
+                                        </div>
+                                        <div class="tp-info">
+                                            <strong>Штрих код:</strong> 8590325509514
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bt">
+                                    <span class="nm">Ватрушка з творогом</span>
+                                    <div class="bt-info">
+                                        <div class="bt-stats">
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi1.svg" alt="">
+                                                </div>
+                                                0,16 кг
+                                            </div>
+                                            <div class="bt-stat">
+                                                <div class="ic">
+                                                    <img src="./img/wi2.svg" alt="">
+                                                </div>
+                                                40 шт./ящ.
+                                            </div>
+                                        </div>
+                                        <div class="bt-price">
+                                            <p>20.16грн</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__cont">
+            <div class="footer__logo">
+                <div class="logo">
+                    <a href="">
+                        <img src="./img/logf.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <span class="footer__title">Каталог товарів</span>
+                <ul>
+                    <li><a href="">Кондитерські вироби</a></li>
+                    <li><a href="">Листково-дріжджові вироби</a></li>
+                    <li><a href="">Хлібо - булочні вироби</a></li>
+                    <li><a href="">Напівфабрикати</a></li>
+                </ul>
+
+            </div>
+            <div class="footer__menu">
+                <span class="footer__title">для клієнта</span>
+                <ul>
+                    <li><a href="">Про нас</a></li>
+                    <li><a href="">Доставка та оплата</a></li>
+                    <li><a href="">Повернення та обмін</a></li>
+                    <li><a href="">Контакти</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer__socs">
+                <span class="footer__title">контакти сито </span>
+                <a href="" class="mail">syto.bakery@gmail.com</a>
+                <a href="" class="btn-call">
+                    <div class="ic">
+                        <img src="./img/crous1.svg" alt="">
+                    </div>
+                    +38 (066) 874 66 23
+                </a>
+                <div class="scs">
+                    <a href="" style="--ic: url('../img/instaic.svg')" target="_blank"></a>
+                    <a href="" style="--ic: url('../img/fabic.svg')" target="_blank"></a>
+                </div>
+
+            </div>
+        </div>
+        <a href="" class="footer__powered" target="_blank">
+            powered by <strong>no_name</strong>
+        </a>
+    </div>
+</footer>
+
+
+<div class="modal-window modal-window--discount" data-modal="discount">
+    <div class="backplate"></div>
+    <div class="modal-container">
+        <div class="cls">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="modal-cont">
+            <div class="modal-cont__top">
+                <div class="img">
+
+                </div>
+            </div>
+            <div class="modal-cont__bot">
+                <div class="modal-discount">
+                    <span class="subttl"></span>
+                    <div class="bt-block">
+                    </div>
+                    <div class="txt">
+
+                    </div>
+                    <a href="" class="btn btn--orange" style="--ic: url('../img/iconpdf.svg');" download>
+                        завантажити каталог
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-window modal-window--thanks" data-modal="thanks">
+    <div class="backplate"></div>
+    <div class="modal-container">
+        <div class="cls">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="modal-cont">
+            <div class="modal-cont__top">
+                <div class="img">
+                    <img src="./img/ths1.jpg" alt="">
+                </div>
+            </div>
+            <div class="modal-cont__bot">
+                <div class="modal-cont__thanks">
+                    <span class="subttl">Дякуємо!  <br>Ваша заявка успішно відправлена</span>
+                    <div class="txt">
+                        <p>Наш менеджер вже обробляє ваш запит і зв’яжеться з вами найближчим часом. Якщо у вас є
+                            термінові питання, зателефонуйте нам або напишіть у месенджер.</p>
+                    </div>
+                    <div class="infos">
+                        <a href="">
+                            <div class="ic">
+                                <img src="./img/tlic.svg" alt="">
+                            </div>
+                            +38 (066) 874 66 23
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="" style="--bg: #F9DCF5; --ic: url('../img/sc1.svg')"></a>
+                            </li>
+                            <li>
+                                <a href="" style="--bg: #DCF5F9; --ic: url('../img/sc2.svg')"></a>
+                            </li>
+                            <li>
+                                <a href="" style="--bg: #EBF4D9; --ic: url('../img/sc3.svg')"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="" class="btn btn--orange" style="--ic: url('../img/ichw1.svg');">
+                        НА головну
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-window modal-window--video" data-modal="video">
+    <div class="backplate"></div>
+    <div class="modal-container">
+        <div class="cls">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="modal-cont">
+            <div class="video-container"></div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./libs/mskinput.js"></script>
+<script class="main-script" src="./js/scripts.min.js"></script>
+<script  src="./js/google-map-marker.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmNNV6dsRJyVZFIo7_GEkmHDysRUnxRQc&callback=initMap&libraries=places&v=weekly,places&ext,geometry"></script>
+</body>
+</html>

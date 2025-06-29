@@ -3549,3 +3549,743 @@ main {
         }
     }
 }
+
+.catalog-main {
+
+    &__discount {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
+    }
+}
+
+.discount-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    .img {
+        width: 100%;
+        @include overFlow;
+        height: 0;
+        padding-top: 71.89%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+
+    .txt {
+        width: 100%;
+        padding: 0.75rem 0 0;
+    }
+
+    .bt {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.75rem;
+
+        .ic {
+            width: 1.75rem;
+            height: 1.75rem;
+            display: flex;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        p {
+            @include text(0.8rem, $main-color, 1.4, 400);
+
+            strong {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .backplate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $main-color;
+        opacity: 0.2;
+    }
+
+    &.modal-window--discount {
+        .modal-container {
+            max-width: 44.75rem;
+        }
+
+        .cls {
+            span {
+                background: $main-color;
+            }
+        }
+    }
+
+    &.modal-window--video {
+        .modal-container {
+            max-width: 65rem;
+        }
+    }
+
+}
+
+.modal-container {
+    width: 100%;
+    max-width: 37.05rem;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+
+    .cls {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 3;
+        cursor: pointer;
+
+        span {
+            width: 100%;
+            height: 0.1rem;
+            display: inline-block;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all 0.4s ease-in-out;
+
+            &:nth-child(2) {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+
+        &:hover {
+            span {
+                background: $cream;
+                transform: translate(-50%, -50%) rotate(-45deg);
+
+                &:nth-child(2) {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+        }
+    }
+
+}
+
+.video-container {
+    width: 100%;
+    height: 0;
+    padding-top: 48.15%;
+    position: relative;
+
+    iframe, video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.modal-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &__top {
+        width: 100%;
+        display: flex;
+
+        .img {
+            @include overFlow;
+            width: 100%;
+            height: 12.3rem;
+            display: flex;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__bot {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    &__thanks {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.75rem;
+
+        .txt {
+            width: 100%;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+
+            p {
+                @include text(0.8rem, $main-color, 1.4, 400);
+
+                strong {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .infos {
+            margin-bottom: 0.75rem;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1.5rem;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 0.75rem;
+
+                li {
+                    display: flex;
+
+                    a {
+                        display: flex;
+                        width: 1.9rem;
+                        height: 1.9rem;
+                        transition: all 0.4s ease-in-out;
+                        background: var(--bg);
+                        border-radius: 50%;
+
+                        &::after {
+                            width: 100%;
+                            height: 100%;
+                            transition: all 0.4s ease-in-out;
+                            background: $main-color;
+                            display: inline-block;
+                            content: '';
+                            @include mask(var(--ic));
+                        }
+
+                        &:hover {
+                            background: $cream;
+
+                            &::after {
+                                background: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            > a {
+                display: flex;
+                gap: 0.25rem;
+                align-items: center;
+                justify-content: flex-start;
+                font-family: $second-font;
+                @include text(1rem, $main-color, 1, 700);
+                transition: all 0.4s ease-in-out;
+
+                .ic {
+                    width: 2rem;
+                    height: 2rem;
+                    display: inline-block;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                &:hover {
+                    color: $cream;
+                }
+            }
+        }
+    }
+}
+
+.modal-discount {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+
+    .bt-block {
+        width: 100%;
+        display: flex;
+
+        .bt {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.75rem;
+
+            .ic {
+                width: 1.75rem;
+                height: 1.75rem;
+                display: flex;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            p {
+                @include text(0.8rem, $main-color, 1.4, 400);
+
+                strong {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .txt {
+        width: 100%;
+
+        p {
+            @include text(0.8rem, $main-color, 1.4, 400);
+
+            strong {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.bakeries {
+    width: 100%;
+    padding: 2rem 0 3rem;
+
+    &__cont {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+
+    &__top {
+        width: 100%;
+        gap: 4rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .subttl {
+        width: 100%;
+        max-width: 26.8rem;
+        display: inline-block;
+    }
+
+    &__text {
+        width: 100%;
+        max-width: calc(100% - 30.8rem);
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .txt {
+            width: calc(50% - 0.75rem);
+        }
+
+        p {
+            @include text(0.8rem, $main-color, 1.4, 300);
+        }
+
+    }
+
+    &__bot {
+        width: 100%;
+        gap: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .txt {
+            width: 100%;
+            max-width: 26.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 1rem;
+
+            p {
+                font-family: $second-font;
+                @include text(1.6rem, $main-color, 1, 700);
+            }
+        }
+    }
+
+    &__right {
+        width: 100%;
+        max-width: calc(100% - 30.8rem);
+        position: relative;
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            z-index: 3;
+            left: 1rem;
+            transform: translate(0, -50%);
+
+            &.slider-btn--next {
+                left: auto;
+                right: 1rem;
+            }
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        padding-right: calc(((100vw - 93rem) / 2) + 1rem);
+
+    }
+
+    &__slider-wrap {
+        width: calc(100% + ((100vw - 93rem) / 2) + 1rem);
+        display: flex;
+        @include overFlow;
+        position: relative;
+
+        .swiper {
+            width: 100%;
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            width: 36.2%;
+            display: flex;
+
+            .img {
+                width: 100%;
+                height: 0;
+                padding-top: 150.22%;
+                @include overFlow;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+}
+
+.bakeries-maps {
+    width: 100%;
+
+    &__cont {
+        background: #EAEAEA;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .map-block {
+        width: 100%;
+        max-width: calc(100% - 30.85rem);
+        display: flex;
+        height: 43rem;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .info_block {
+        width: 100%;
+        max-width: 30.85rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .subttl {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .addr-inp {
+        width: 100%;
+        gap: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .input-row {
+        width: 100%;
+        position: relative;
+        background: #fff;
+
+        label {
+            position: absolute;
+            left: 0.75rem;
+            top: 0.5rem;
+            display: inline-block;
+            z-index: 1;
+            font-family: $second-font;
+            @include text(0.8rem, $cream, 1, 700);
+
+        }
+
+        ul {
+            overflow-y: auto;
+            max-height: 0;
+            opacity: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            background: #fff;
+            padding: 0;
+            gap: 0.25rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            box-shadow: 0 0.3rem 0.3rem 0.15rem rgba(107, 107, 102, 0.1);
+            z-index: 3;
+            transition: all 0.4s ease-in-out;
+
+            li {
+                width: 100%;
+                cursor: pointer;
+                padding: 0.25rem 0.75rem;
+                @include text(0.8rem, $main-color, 1, 400);
+
+                &.active {
+                    color: $cream;
+                }
+
+            }
+        }
+
+        .selected-value {
+            cursor: pointer;
+            display: flex;
+            width: 100%;
+            padding: 1.6rem 1rem 0.5rem 0.75rem;
+            position: relative;
+            @include text(0.8rem, $main-color, 1.4, 300);
+            transition: all 0.4s ease-in-out;
+
+            &::after {
+                transition: all 0.4s ease-in-out;
+                display: inline-block;
+                content: '';
+                width: 1.05rem;
+                height: 0.8rem;
+                position: absolute;
+                right: 0.75rem;
+                top: 50%;
+                transform: translate(0, -50%) rotate(90deg);
+                background: $main-color;
+                @include mask(url("../img/arrlong.svg"));
+            }
+        }
+
+        select {
+            display: none;
+
+        }
+
+        &.open {
+            ul {
+                max-height: 14rem;
+                opacity: 1;
+            }
+
+            .selected-value {
+                &::after {
+                    background: $cream;
+                    transform: translate(0, -50%) rotate(-90deg);
+                }
+            }
+        }
+    }
+
+    .shop-address {
+        width: 100%;
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        max-height: calc(43rem - 13.4rem);
+        overflow-y: auto;
+
+
+        &__item {
+            width: 100%;
+            border: 1px solid #fff;
+            background: #fff;
+            display: flex;
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            position: relative;
+
+            .shop-show-map {
+                width: 1.5rem;
+                height: 1.5rem;
+                background: $main-color;
+                border-radius: 50%;
+                transition: all 0.4s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0.5rem;
+                right: 0.75rem;
+
+                &::after {
+                    background: #fff;
+                    display: inline-block;
+                    width: 0.55rem;
+                    height: 0.8rem;
+                    content: '';
+                    @include mask(url('../img/arrmp.svg'));
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+
+            &:hover {
+                border-color: $cream;
+
+                .shop-show-map {
+                    background: $cream;
+                }
+            }
+        }
+
+        &__info {
+            width: 100%;
+            padding-right: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        &__title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25rem;
+            justify-content: flex-start;
+            margin-bottom: 0.75rem;
+
+            span {
+                font-family: $second-font;
+                @include text(0.8rem, $cream, 1, 700);
+            }
+
+            p {
+                font-family: $second-font;
+                @include text(1.2rem, $cream, 1, 700);
+            }
+
+        }
+
+        &__text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            p {
+                @include text(0.8rem, $main-color, 1.4, 300);
+            }
+        }
+
+        &__link {
+            text-decoration: underline;
+            margin-top: 0.5rem;
+            font-family: $second-font;
+            @include text(0.8rem, $main-color, 1, 700);
+        }
+    }
+
+}
+
+

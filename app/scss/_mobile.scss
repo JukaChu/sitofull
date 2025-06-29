@@ -1592,6 +1592,219 @@
         align-items: flex-start;
         justify-content: flex-start;
     }
+    .home-types {
+        &.home-types--catalog {
+            padding-top: 1rem;
+        }
+    }
+    .catalog-main__discount {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+    .discount-block {
+        width: 100%;
+
+        .txt {
+            padding: 0.75rem 0 0;
+
+            .bt {
+                p {
+                    font-size: 0.65rem;
+                }
+            }
+        }
+    }
+    .modal-cont__top .img {
+
+    }
+    .modal-cont__bot {
+        padding: 0.75rem;
+    }
+    .modal-discount {
+        gap: 0.75rem;
+    }
+    .modal-discount .bt-block .bt p {
+        font-size: 0.65rem;
+    }
+    .modal-discount .txt p {
+        font-size: 0.65rem;
+    }
+    .modal-discount {
+        .btn {
+            margin-bottom: 0.75rem;
+        }
+    }
+    .modal-container {
+        overflow-y: auto;
+    }
+    .modal-container .cls {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    .modal-cont__thanks .infos {
+        gap: 0.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .modal-cont__thanks .infos {
+        margin-bottom: 0;
+    }
+    .modal-cont__thanks .txt p {
+        font-size: 0.65rem;
+    }
+    .modal-cont__thanks .txt {
+        margin: 0;
+    }
+    .bakeries {
+        padding: 1rem 0 1.5rem;
+
+        &__cont {
+            gap: 1.5rem;
+
+        }
+
+        &__top {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 0.75rem;
+        }
+
+        .subttl {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &__text {
+            width: 100%;
+            max-width: 100%;
+            gap: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .txt {
+                width: 100%;
+
+                p {
+                    font-size: 0.65rem;
+                }
+            }
+        }
+
+        &__bot {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 1.5rem;
+
+            .txt {
+                width: 100%;
+                max-width: 100%;
+                gap: 1rem;
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        &__right {
+            max-width: 100%;
+            width: 100%;
+
+            .slider-btn {
+                left: 0;
+
+                &.slider-btn--next {
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+
+        &__slider-wrap {
+            width: calc(100% + 2rem);
+            padding: 0;
+            margin-left: -1rem;
+            @include overFlow;
+
+
+            &::after {
+                width: 67%;
+                right: -30%;
+                top: 0;
+                height: 100%;
+                display: inline-block;
+                content: '';
+                position: absolute;
+                pointer-events: none;
+                z-index: 2;
+                background: linear-gradient(88.96deg, rgba(255, 255, 255, 0) 0.86%, rgba(255, 255, 255, 0.8) 29.11%);
+
+            }
+
+            .swiper {
+                padding: 0 1rem;
+                overflow: visible;
+            }
+
+            .swiper-wrapper {
+                overflow: visible;
+            }
+        }
+
+        &__slider {
+            padding: 0;
+        }
+
+        .swiper-slide {
+            width: 67.68%;
+
+            .img {
+                padding-top: 118.04%;
+            }
+        }
+    }
+    .bakeries-maps__cont {
+        width: calc(100% + 2rem);
+        padding: 0 1rem;
+        margin-left: -1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .map-block {
+            width: 100%;
+            height: 12.75rem;
+            max-width: 100%;
+        }
+    }
+    .bakeries-maps .shop-address {
+        max-height: 16rem;
+    }
+    .bakeries-maps .info_block {
+        padding: 1.5rem 0;
+    }
+    .bakeries-maps .input-row label {
+        font-size: 0.65rem;
+    }
+    .bakeries-maps .input-row .selected-value {
+        font-size: 0.65rem;
+    }
+    .bakeries-maps .shop-address__title span {
+        font-size: 0.65rem;
+    }
+    .bakeries-maps .shop-address__title p {
+        font-size: 0.65rem;
+    }
+    .bakeries-maps .shop-address__text p {
+        font-size: 0.65rem;
+    }
 }
 
 
